@@ -11,13 +11,13 @@ namespace Task4
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine()); // Ввод n определяющего количество рядов и количесто столбцов в последнем ряду
-            string s = "[*]";
-            string item = "[*]";
-            
-            for(int i = 1; i <= n; i++) // Цикл складывающий строку, с переходом на следующий ряд
+
+            for(int i = 0; i < n; i++) // Цикл складывающий строку, с переходом на следующий ряд
             {
-                Console.WriteLine(s);
-                s += item;
+                for(int j = 0; j < i + 1; j++)
+                {
+                    Console.WriteLine("[*]");
+                }
             }
             Console.ReadLine(); // Костыль для того, чтобы окно терминала не закрывалось после завершения работы
         }
